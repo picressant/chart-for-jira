@@ -4,10 +4,12 @@
   "license": "MIT",
   "scripts": {
     "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "build": "parcel build ./src/index.html --public-url ./",
+    "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   },
   "devDependencies": {
-    "parcel": "^2.6.2"
+    "parcel": "^2.6.2",
+    "push-dir": "^0.4.1"
   },
   "dependencies": {
     "@cubejs-client/core": "^0.31.0",
